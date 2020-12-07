@@ -1,47 +1,3 @@
-
-
-Search Tutors & Students
-
-
-
-
-Tutors & Students
-
-Browse Slack
-
-Add channels
-
-
-
-
-Add teammates
-Zachary Auerbach
-
-
-
-Unlock messages prior to November 29th in Tutors & Students
-To view and search all the messages in your workspace’s history, rather than just the 10,000 most recent, upgrade to one of our paid plans.
-
-Zachary Auerbach  3:00 PM
-Hey Kyle,
-sessions up if you wanted one today
-
-Zachary Auerbach  3:07 PM
-https://stackoverflow.com/questions/49096501/my-terminal-in-vscode-has-a-tiny-font-after-installing-zsh-and-changing-font-sty
-Stack OverflowStack Overflow
-My terminal in VSCode has a tiny font after installing zsh and changing font style?
-If you look at the vscode terminal - its too tiny. Heres the user settings that I have modified to create this result. I have searched how to change terminal fonts at vscode but I have followed all
-
-Zachary Auerbach  4:03 PM
-Nodemon
-4:05
-https://docs.google.com/forms/d/e/1FAIpQLSdb4ejjbqoqKO-Q4k7zeO_xwykwB0dxYLWYm1mX5Ik45MzEeg/viewform
-4:05
-UCLA-LA-FSF-FT-10-2020-U-C-M-F
-New
-
-Zachary Auerbach  4:04 PM
-Untitled 
 var $noteTitle = $(".note-title");
 var $noteText = $(".note-textarea");
 var $saveNoteBtn = $(".save-note");
@@ -161,13 +117,7 @@ $noteTitle.on("keyup", handleRenderSaveBtn);
 $noteText.on("keyup", handleRenderSaveBtn);
 // Gets and renders the initial list of notes
 getAndRenderNotes();
-Collapse
 
-
-
-white_check_mark
-eyes
-raised_hands
 
 
 
