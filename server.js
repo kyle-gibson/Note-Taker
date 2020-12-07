@@ -1,60 +1,45 @@
-// dependancies 
-// we need to require all of our dependancies
 const express = require("express");
 const fs = require("fs");
 const path = require("path");
 
-// global variables 
-// devlaring global variables
+// Declaring our global variables
 const app = express();
-const PORT = process.env.PORT || 10000;
-const mainDir = path.join(__dirname, "/public");
+const PORT = process.env.PORT || 9000;
+const mainDir = path.join(__dirname, "./Develop/public");
 
 
-// middlewear
-// access to req.body
+// Middlewear
 app.use(express.static("public"));
 app.use(express.urlencoded({extended: true}));
 app.use(express.json());
 
 
-// routes
-// html routes here
-// need a rotue to server html files so when he those endpoints, the browser will server our html to us
-// goal is to display what in the index.html file in the root directory
-// fs module, path
-// we are defining our home route, which takes in a callback 
+// HTML Routes
 app.get("/", (req, res) => {
-    res.sendFile(path.join(mainDir, "./public/index.html"))
+    res.sendFile(path.join(mainDir, 'index.html'))
 });
 
 app.get("/notes", (req, res) => {
-    res.sendFile(path.join(mainDir, "./public/notes.html"))
+    res.sendFile(path.join(mainDir, 'notes.html'))
 });
 
-// googling - middlewear - static files
-// starting folder paths @ a designated folder 
-
+// API Routes
 app.get("/api/notes",(req, res) => {
-    res.sendFile(path.join(mainDir, "db.json"))
+    res.sendFile(path.join(mainDir, './Develop/db/db.json'))
 });
 
 app.post("/api/notes",(req, res) => {
-    let noteCreate = fs.readFileSync(mainDir, "db.json", "utf8")
+    let noteCreate = fs.readFileSync(mainDir, './Develop/db/db.json', "utf8")
     let newNote = req.body;
-    console.log(newNote);
+    console.log(newNote);    
+    noteCreate.push(newNote)
+    fs.writeFileSync('./Develop/db/db.json', noteCreate)
+    console.log('posted to db.json')
+    res.json(noteCreate)
 });
 
-
-// api routes here 
-// end goal is to return data in db.json in response 
-
-
-
-// server listener 
+// Server Listener
 app.listen(PORT, () => {
     console.log("You have started up the server");
 })
 
-
-// need to grab
